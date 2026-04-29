@@ -1,0 +1,119 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page styling */
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Main game card */
+.game-container {
+  width: 90%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 35px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+/* Main heading */
+h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+/* Instruction text */
+.instructions {
+  color: #d6e4ff;
+  margin-bottom: 20px;
+}
+
+/* RGB text box */
+#rgb-value {
+  background: white;
+  color: #222;
+  padding: 15px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Lives and score row */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  font-weight: bold;
+}
+
+/* Colour option grid */
+.colour-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* Colour boxes */
+.colour-box {
+  height: 120px;
+  border-radius: 18px;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover effect for colour boxes */
+.colour-box:hover {
+  transform: scale(1.07);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Message text */
+#message {
+  margin-top: 22px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Replay button */
+#replay-btn {
+  display: none;
+  margin-top: 20px;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 12px;
+  background: #00c853;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Replay hover effect */
+#replay-btn:hover {
+  background: #00a344;
+  transform: scale(1.05);
+}
+
+/* Mobile screen styling */
+@media (max-width: 500px) {
+  .colour-options {
+    grid-template-columns: 1fr;
+  }
+
+  .colour-box {
+    height: 90px;
+  }
+}

@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dff6ff, #f7f7f7);
+}
+
+.video-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.video-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 850px;
+  width: 100%;
+}
+
+.video-card h1 {
+  font-size: 36px;
+  color: #1f4e5f;
+  margin-bottom: 10px;
+}
+
+.video-card p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+video {
+  width: 100%;
+  max-width: 750px;
+  border-radius: 16px;
+  border: 5px solid #1f4e5f;
+}

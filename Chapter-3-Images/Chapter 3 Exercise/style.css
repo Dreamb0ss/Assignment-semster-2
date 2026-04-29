@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #dcfce7);
+  color: #1f2937;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #14532d;
+  color: white;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.card {
+  width: 300px;
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.card img {
+  border-radius: 14px;
+  filter: brightness(90%) contrast(120%) saturate(120%);
+}
+
+.card:nth-child(2) img {
+  filter: grayscale(30%) contrast(130%);
+}
+
+.card:nth-child(3) img {
+  filter: sepia(25%) brightness(105%);
+}
+
+h2 {
+  color: #166534;
+}
+
+p {
+  font-size: 14px;
+}
