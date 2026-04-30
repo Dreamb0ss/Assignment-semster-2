@@ -1,11 +1,11 @@
-/* Reset default spacing */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Page styling */
+
 body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
@@ -16,7 +16,7 @@ body {
   color: white;
 }
 
-/* Main game card */
+
 .game-container {
   width: 90%;
   max-width: 520px;
@@ -28,19 +28,19 @@ body {
   backdrop-filter: blur(10px);
 }
 
-/* Main heading */
+
 h1 {
   font-size: 32px;
   margin-bottom: 12px;
 }
 
-/* Instruction text */
+
 .instructions {
   color: #d6e4ff;
   margin-bottom: 20px;
 }
 
-/* RGB text box */
+
 #rgb-value {
   background: white;
   color: #222;
@@ -50,7 +50,7 @@ h1 {
   letter-spacing: 1px;
 }
 
-/* Lives and score row */
+
 .stats {
   display: flex;
   justify-content: space-between;
@@ -58,14 +58,14 @@ h1 {
   font-weight: bold;
 }
 
-/* Colour option grid */
+
 .colour-options {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
-/* Colour boxes */
+
 .colour-box {
   height: 120px;
   border-radius: 18px;
@@ -74,20 +74,20 @@ h1 {
   transition: 0.3s;
 }
 
-/* Hover effect for colour boxes */
+
 .colour-box:hover {
   transform: scale(1.07);
   box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
 }
 
-/* Message text */
+
 #message {
   margin-top: 22px;
   font-size: 18px;
   font-weight: bold;
 }
 
-/* Replay button */
+
 #replay-btn {
   display: none;
   margin-top: 20px;
@@ -101,13 +101,13 @@ h1 {
   transition: 0.3s;
 }
 
-/* Replay hover effect */
+
 #replay-btn:hover {
   background: #00a344;
   transform: scale(1.05);
 }
 
-/* Mobile screen styling */
+
 @media (max-width: 500px) {
   .colour-options {
     grid-template-columns: 1fr;

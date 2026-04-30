@@ -1,4 +1,4 @@
-/* Base */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -6,7 +6,7 @@ body {
   color: #1f2937;
 }
 
-/* Header */
+
 header {
   text-align: center;
   padding: 50px 20px;
@@ -15,7 +15,7 @@ header {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Nav */
+
 nav {
   background: #047857;
   text-align: center;
@@ -33,14 +33,14 @@ nav a:hover {
   color: #fde68a;
 }
 
-/* Main */
+
 main {
   width: 90%;
   max-width: 1200px;
   margin: 40px auto;
 }
 
-/* Wireframe */
+
 .wireframe {
   background: rgba(255,255,255,0.7);
   backdrop-filter: blur(10px);
@@ -59,7 +59,7 @@ main {
   border: 2px dashed #94a3b8;
 }
 
-/* Wireframe parts */
+
 .wf-header, .wf-nav, .wf-footer {
   background: linear-gradient(135deg, #93c5fd, #60a5fa);
   padding: 12px;
@@ -82,14 +82,14 @@ main {
   border: 2px solid #cbd5f5;
 }
 
-/* Grid */
+
 .planner-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
-/* Column */
+
 .column {
   background: white;
   padding: 25px;
@@ -97,7 +97,7 @@ main {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Task */
+
 .task {
   background: #f1f5f9;
   padding: 18px;
@@ -111,7 +111,7 @@ main {
   transform: translateY(-5px);
 }
 
-/* Button */
+
 button {
   margin-top: 10px;
   padding: 10px 14px;
@@ -126,7 +126,7 @@ button:hover {
   opacity: 0.9;
 }
 
-/* Footer */
+
 footer {
   text-align: center;
   padding: 20px;

@@ -1,4 +1,4 @@
-/* RESET */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -6,7 +6,7 @@ body {
   color: #1f2937;
 }
 
-/* HEADER */
+
 header {
   text-align: center;
   padding: 50px 20px;
@@ -19,7 +19,7 @@ header h1 {
   font-size: 40px;
 }
 
-/* NAVBAR */
+
 nav {
   background: #047857;
   text-align: center;
@@ -38,14 +38,14 @@ nav a:hover {
   color: #fde68a;
 }
 
-/* MAIN */
+
 main {
   width: 85%;
   max-width: 1000px;
   margin: 40px auto;
 }
 
-/* CARD DESIGN */
+
 .card {
   background: white;
   padding: 25px;
@@ -54,19 +54,18 @@ main {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* IMAGE */
+
 .card img {
   width: 100%;
   border-radius: 12px;
   margin-top: 15px;
 }
 
-/* HEADINGS */
+
 h2 {
   color: #047857;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;

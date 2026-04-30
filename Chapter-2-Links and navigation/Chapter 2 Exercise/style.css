@@ -14,7 +14,7 @@ body {
   color: white;
 }
 
-/* NAVBAR */
+
 .navbar {
   background: rgba(18, 61, 24, 0.95);
   padding: 20px 50px;
@@ -44,7 +44,7 @@ body {
   color: #9cff9c;
 }
 
-/* HERO */
+
 .hero {
   min-height: 80vh;
   display: flex;
@@ -71,7 +71,7 @@ body {
   margin-bottom: 35px;
 }
 
-/* BUTTON */
+
 .btn {
   background: white;
   color: #1b5e20;
@@ -89,7 +89,7 @@ body {
   transform: scale(1.05);
 }
 
-/* CARDS */
+
 .card {
   width: 82%;
   margin: 45px auto;
@@ -126,7 +126,7 @@ li {
   margin: 10px 0;
 }
 
-/* FOOTER */
+
 footer {
   background: #071b0c;
   color: white;
@@ -135,7 +135,7 @@ footer {
   margin-top: 50px;
 }
 
-/* PHONE SCREEN */
+
 @media (max-width: 700px) {
   .navbar {
     flex-direction: column;

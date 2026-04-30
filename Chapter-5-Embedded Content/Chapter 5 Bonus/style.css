@@ -11,7 +11,7 @@ body {
   height: 100vh;
 }
 
-/* TTS SECTION */
+
 .tts {
   width: 40%;
   padding: 20px;
@@ -35,7 +35,7 @@ button {
   border-radius: 5px;
 }
 
-/* SOUND BOARD */
+
 .soundboard {
   width: 60%;
   padding: 20px;
