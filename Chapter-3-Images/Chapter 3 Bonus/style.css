@@ -1,28 +1,101 @@
+/* Simple CSS for Styling Divs Exercise */
+
 body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
-  font-family: 'Segoe UI', sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    line-height: 1.6;
 }
 
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Typography */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Common box style */
 .box {
-  width: 200px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  border: 4px solid black;
-  border-radius: 12px;
-  background: white;
-  transition: 0.3s ease;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin: 25px;
+    font-family: sans-serif;
+    font-size: 20px;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* A - purple border + red shadow */
+.a {
+    border: 4px solid purple;
+    box-shadow: 10px 10px 10px red;
+}
+
+/* B - green border */
+.b {
+    border: 4px solid green;
+}
+
+/* C - multiple borders (effect using box-shadow) */
+.c {
+    border-radius: 20px;
+    border: 4px solid orange;
+    box-shadow:
+        0 0 0 10px blue,
+        0 0 0 20px red,
+        0 0 0 30px green;
+}
+
+/* D - simple red border */
+.d {
+    border: 4px solid red;
 }
 
 
-.box:hover {
-  transform: translateY(-10px) scale(1.05);
+
+/* Code blocks */
+pre {
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95em;
+    line-height: 1.5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #4a5568;
+}
+
+code {
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
 }

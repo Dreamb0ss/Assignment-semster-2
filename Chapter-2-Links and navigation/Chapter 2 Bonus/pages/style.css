@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -33,11 +32,6 @@ nav a {
   font-weight: bold;
   transition: 0.3s;
 }
-
-nav a:hover {
-  color: #fde68a;
-}
-
 
 main {
   width: 85%;

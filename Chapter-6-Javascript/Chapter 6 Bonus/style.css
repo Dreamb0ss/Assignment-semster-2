@@ -75,12 +75,6 @@ h1 {
 }
 
 
-.colour-box:hover {
-  transform: scale(1.07);
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
-}
-
-
 #message {
   margin-top: 22px;
   font-size: 18px;
@@ -100,13 +94,6 @@ h1 {
   cursor: pointer;
   transition: 0.3s;
 }
-
-
-#replay-btn:hover {
-  background: #00a344;
-  transform: scale(1.05);
-}
-
 
 @media (max-width: 500px) {
   .colour-options {

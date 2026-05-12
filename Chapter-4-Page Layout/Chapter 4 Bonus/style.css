@@ -22,16 +22,7 @@ nav {
   padding: 15px;
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
 
-nav a:hover {
-  color: #fde68a;
-}
 
 
 main {
@@ -57,16 +48,6 @@ main {
   border-radius: 15px;
   background: #f8fafc;
   border: 2px dashed #94a3b8;
-}
-
-
-.wf-header, .wf-nav, .wf-footer {
-  background: linear-gradient(135deg, #93c5fd, #60a5fa);
-  padding: 12px;
-  margin: 8px;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
 }
 
 .wf-main {
@@ -107,10 +88,6 @@ main {
   transition: 0.3s;
 }
 
-.task:hover {
-  transform: translateY(-5px);
-}
-
 
 button {
   margin-top: 10px;
@@ -120,10 +97,6 @@ button {
   color: white;
   border-radius: 8px;
   cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.9;
 }
 
 

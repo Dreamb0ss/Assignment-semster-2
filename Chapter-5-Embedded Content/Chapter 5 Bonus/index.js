@@ -1,79 +1,105 @@
+// Audio Soundboard JavaScript
 
+// Array containing all audio samples
 const samples = [
-  { name: "Ah-Ha", file: "audio/aha.mp3" },
-  { name: "Dan", file: "audio/dan.mp3" },
-  { name: "Back of the net", file: "audio/back.mp3" },
-  { name: "Bang out of order", file: "audio/bang.mp3" },
-  { name: "email of the evening ", file: "audio/email.mp3" },
-  { name: "hello partrigde", file: "audio/hello.mp3" },
-  { name: "ia tea scotchegg", file: "audio/Ia.mp3" },
-  { name: "im confused", file: "audio/im confused.mp3" },
-
-  
-  { name: "Extra 1", file: "audio/extra1.mp3" },
-  { name: "Extra 2", file: "audio/extra2.mp3" },
-  { name: "Extra 3", file: "audio/extra3.mp3" }
+  { name: "Ah-Ha", file: "Audio/aha.mp3" },
+  { name: "Dan", file: "Audio/dan.mp3" },
+  { name: "Back of the net", file: "Audio/back.mp3" },
+  { name: "Bang out of order", file: "Audio/bang.mp3" },
+  { name: "Email of the evening", file: "Audio/email.mp3" },
+  { name: "Hello Partridge", file: "Audio/hello.mp3" },
+  { name: "I'm confused", file: "Audio/im confused.mp3" },
+  { name: "La", file: "Audio/la.mp3" }
 ];
 
-let currentPage = 0;
-const perPage = 9;
-
+/**
+ * Loads and displays all audio samples
+ */
 function loadSamples() {
   const grid = document.getElementById("grid");
   grid.innerHTML = "";
 
-  const start = currentPage * perPage;
-  const pageItems = samples.slice(start, start + perPage);
+  // Create audio card for each sample
+  samples.forEach((sample, index) => {
+    const sampleCard = createSampleCard(sample, index);
+    grid.appendChild(sampleCard);
+  });
+}
 
-  pageItems.forEach(sample => {
-    const div = document.createElement("div");
-    div.className = "sample";
+/**
+ * Creates an individual audio sample card
+ */
+function createSampleCard(sample, index) {
+  const card = document.createElement("div");
+  card.className = "sample";
 
-    const audio = new Audio(sample.file);
+  // Create audio element
+  const audio = new Audio(sample.file);
 
-    
-    audio.addEventListener("loadedmetadata", () => {
-      const duration = audio.duration.toFixed(2);
+  // Create card content
+  card.innerHTML = `
+    <h3>${sample.name}</h3>
+    <p class="duration">Loading...</p>
+  `;
 
-      div.innerHTML = `
-        <h3>${sample.name}</h3>
-        <p>${duration}s</p>
-      `;
-    });
-
-    div.onclick = () => {
-      audio.currentTime = 0;
-      audio.play();
-    };
-
-    grid.appendChild(div);
+  // Load audio metadata to get duration
+  audio.addEventListener("loadedmetadata", () => {
+    const duration = audio.duration.toFixed(2);
+    const durationElement = card.querySelector(".duration");
+    durationElement.textContent = `${duration}s`;
   });
 
-  
-  document.getElementById("prev").style.display =
-    currentPage === 0 ? "none" : "inline-block";
+  // Handle audio playback on click
+  card.addEventListener("click", () => {
+    playAudioSample(audio);
+  });
 
-  document.getElementById("next").style.display =
-    (start + perPage >= samples.length) ? "none" : "inline-block";
+  return card;
 }
 
+/**
+ * Plays an audio sample
+ */
+function playAudioSample(audio) {
+  // Reset audio to start
+  audio.currentTime = 0;
 
-function nextPage() {
-  currentPage++;
-  loadSamples();
+  // Play the audio
+  audio.play().catch(error => {
+    console.error("Error playing audio:", error);
+    alert("Error playing audio: " + error.message);
+  });
 }
 
-function prevPage() {
-  currentPage--;
-  loadSamples();
-}
-
-
+/**
+ * Converts text to speech
+ */
 function speakText() {
-  const text = document.getElementById("text").value;
-  const speech = new SpeechSynthesisUtterance(text);
-  speechSynthesis.speak(speech);
+  const textInput = document.getElementById("text");
+  const text = textInput.value.trim();
+
+  if (!text) {
+    alert("Please enter some text to speak");
+    return;
+  }
+
+  // Cancel any ongoing speech
+  window.speechSynthesis.cancel();
+
+  // Create speech synthesis utterance
+  const utterance = new SpeechSynthesisUtterance(text);
+
+  // Start speech synthesis
+  window.speechSynthesis.speak(utterance);
 }
 
+/**
+ * Initialize the application
+ */
+function initializeApp() {
+  loadSamples();
+  console.log(`Audio Soundboard initialized with ${samples.length} samples`);
+}
 
-loadSamples();
+// Initialize when DOM is ready
+document.addEventListener("DOMContentLoaded", initializeApp);

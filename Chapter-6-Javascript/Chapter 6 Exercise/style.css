@@ -50,13 +50,6 @@ button {
   cursor: pointer;
   transition: 0.3s;
 }
-
-/* Hover effect */
-button:hover {
-  background: #007bff;
-  transform: scale(1.05);
-}
-
 #result {
   margin-top: 20px;
   font-size: 20px;
